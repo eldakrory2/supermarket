@@ -1,15 +1,16 @@
 <!DOCTYPE html>
+
 <html dir="rtl" lang="ar">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>ورشة - متجر علي بابا أحمد الدكروري</title>
+<title>الامن الغذائي متجر علي بابا أحمد الدكروري</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
 <style>
     :root {
       --primary-color: #d32f2f; /* أحمر داكن */
       --secondary-color: #f44336; /* أحمر */
-      --accent-color: hsl(138, 90%, 21%); /* أزرق */
+      --accent-color: #1976d2; /* أزرق */
       --light-color: #ffcdd2; /* أحمر فاتح */
       --dark-color: #b71c1c; /* أحمر غامق */
       --text-color: #fff;
@@ -19,7 +20,7 @@
     body {
       margin: 0;
       font-family: 'Cairo', sans-serif;
-      background: #036410;
+      background: #b3f042;
       color: var(--text-color);
       overflow-x: hidden;
     }
@@ -46,7 +47,10 @@
       gap: 10px;
       padding: 8px;
     }
-    
+    nav a {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
     
     nav {
       background-color: var(--primary-color);
@@ -55,10 +59,6 @@
       gap: 15px;
       padding: 10px;
       flex-wrap: wrap;
-    }
-    nav a {
-      padding: 6px 12px;
-      font-size: 0.9rem;
     }
     
     nav a {
@@ -78,7 +78,7 @@
     }
     .section {
       padding: 15px;
-    } 
+    }
     
     .section {
       padding: 25px;
@@ -390,7 +390,6 @@
       padding: 5px 15px;
       border-radius: 20px;
     }
-    
     
     /* سلة التسوق المحسنة */
     .cart-icon {
@@ -792,7 +791,6 @@
       to {right: 20px; opacity: 1;}
     }
     
-    
     @keyframes fadeOut {
       from {opacity: 1;}
       to {opacity: 0;}
@@ -808,10 +806,12 @@
     .pulse {
       animation: pulse 2s infinite;
     }
-    @media (max-width: 768px) {
+     /* Media Queries */
+     @media (max-width: 768px) {
       .product {
         width: calc(100% - 20px);
       }
+      
       header h1 {
         font-size: 1.8rem;
       }
@@ -932,26 +932,8 @@
       background: #d32f2f !important;
       margin-left: 10px;
     }
-    .container {
-            width: 100%;
-            height: 100vh;
-            scroll-snap-type: y mandatory;
-            overflow-y: scroll;
-        }
-
-        .content {
-            flex: 1;
-            color: #f5f5f5;
-            padding: 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background: linear-gradient(135deg, hsl(123, 95%, 32%), hsl(143, 85%, 35%));
-            z-index: 2;
-        }
-
-        /* نمط زر التواصل */
-        .contact-btn {
+    /* نمط زر التواصل */
+    .contact-btn {
             position: fixed;
             bottom: 30px;
             right: 30px;
@@ -1042,14 +1024,14 @@
 </head>
 <body>
 <header>
-<h1> 💾ورشة متجر علي بابا أحمد الدكروري 💾<br/>هندسة وتجارة العدد وقطع الغيار</h1>
+<h1> 💾متجر علي بابا أحمد الدكروري 💾<br/>تجارة المواد الغذائية</h1>
 </header>
 <nav>
 <a href="https://www.youtube.com/@ahmed-eldakrory" target="_blank">قناة اليوتيوب</a>
 <a href="https://www.facebook.com/profile.php?id=61569878923724" target="_blank">صفحة الفيس بوك</a>
-<a href="#men">قسم أكترونيات وأجهزة منزلية سوفت وير وبرمجه</a>
-<a href="#women">قسم تجارة العدد والادوات وقطع غيار</a>
-<a href="#kids">خدمات مصرفية أمن ونظافة </a>
+<a href="#men">قسم تجارة مواد غذائية جملة</a>
+<a href="#women">قسم المطاعم والفنادق جملة</a>
+<a href="#kids">لوازم الصيدليات وتجارة الادوية</a>
 <a href="#clock">الساعة</a>
 <a href="#slide" >💾 تواصل معنا</a>
 <a href="#" id="loadBtn">🔄 استرجاع البيانات</a>
@@ -1073,21 +1055,21 @@
 </div>
 <button class="cart-btn" id="invoiceBtn">🧾 عرض الفاتورة</button>
 </div>
-<!-- قسم أكترونيات وأجهزة منزلية سوفت وير وبرمجه-->
+<!-- قسم تجارة مواد غذائية جملة -->
 <section class="section" id="men">
-<h2>💾 قسم أكترونيات وأجهزة منزلية سوفت وير وبرمجه</h2>
+<h2>💾 قسم تجارة مواد غذائية جملة</h2>
 <div class="products" id="menProducts"></div>
 <!-- المنتجات ستضاف هنا تلقائيا -->
 </section>
-<!-- قسم تجارة العدد والادوات وقطع غيار-->
+<!-- قسم المطاعم والفنادق جملة-->
 <section class="section" id="women">
-<h2>💾 قسم تجارة العدد والادوات وقطع غيار</h2>
+<h2>💾 قسم المطاعم والفنادق جملة</h2>
 <div class="products" id="womenProducts"></div>
 <!-- المنتجات ستضاف هنا تلقائيا -->
 </section>
-<!-- خدمات مصرفية أمن ونظافة -->
+<!-- لوازم الصيدليات وتجارة الادوية-->
 <section class="section" id="kids">
-<h2>🧒 قسم خدمات مصرفية أمن ونظافة </h2>
+<h2>🧒 لوازم الصيدليات وتجارة الادوية</h2>
 <div class="products" id="kidsProducts">
 <!-- المنتجات ستضاف هنا تلقائيا -->
 </div>
@@ -1165,38 +1147,39 @@
     جميع الحقوق محفوظة © متجر علي بابا أحمد الدكروري 2025
     <br/>
     <section id="slide">
-    <div class="slide">
-      <div class="content">
-          <div class="contact-form-container">
-              <h2>تواصل معنا</h2>
-              <form id="contactForm" class="contact-form">
-                  <div class="form-group">
-                      <label for="name">الاسم الكامل</label>
-                      <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" required>
-                  </div>
-                  
-                  <div class="form-group">
-                      <label for="phone">رقم الهاتف</label>
-                      <input type="tel" id="phone" name="phone" placeholder="أدخل رقم هاتفك" required>
-                  </div>
-                  
-                  <div class="form-group">
-                      <label for="subject">الموضوع</label>
-                      <select id="subject" name="subject" required>
-                          <option value="">اختر موضوع الرسالة</option>
-                          <option value="استفسار">استفسار</option>
-                          <option value="طلب عرض">طلب عرض</option>
-                          <option value="شكوى">شكوى</option>
-                          <option value="اقتراح">اقتراح</option>
-                      </select>
-                  </div> 
-                  <button type="submit" class="submit-btn">إرسال الرسالة <i class="fas fa-paper-plane"></i></button>
-              </form>
-          </div>
-      </div>
-      <div class="image-container">
+      <div class="slide">
+        <div class="content">
+            <div class="contact-form-container">
+                <h2>تواصل معنا</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل</label>
+                        <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف</label>
+                        <input type="tel" id="phone" name="phone" placeholder="أدخل رقم هاتفك" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">الموضوع</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">اختر موضوع الرسالة</option>
+                            <option value="استفسار">استفسار</option>
+                            <option value="طلب عرض">طلب عرض</option>
+                            <option value="شكوى">شكوى</option>
+                            <option value="اقتراح">اقتراح</option>
+                        </select>
+                    </div> 
+                    <button type="submit" class="submit-btn">إرسال الرسالة <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="image-container">
+  </div>
+  </section>
 </div>
-</section>
 <script>
     // متغيرات التطبيق
     let products = {
@@ -1236,13 +1219,13 @@
         lastProductId: lastProductId,
         currentInvoiceNumber: currentInvoiceNumber
       };
-      localStorage.setItem('storeDataVersion3', JSON.stringify(data));
+      localStorage.setItem('storeDataIndependent', JSON.stringify(data));
       showAlert('تم حفظ جميع البيانات بنجاح', 'success');
     }
 
     // دالة لتحميل البيانات من localStorage
     function loadData() {
-      const savedData = localStorage.getItem('storeDataVersion3');
+      const savedData = localStorage.getItem('storeDataIndependent');
       if (savedData) {
         const data = JSON.parse(savedData);
         products = data.products || { men: [], women: [], kids: [] };
@@ -1266,31 +1249,36 @@
     }
 
     // دالة لعرض المنتجات في قسم معين
-    function renderProducts(sectionId) {
-      const container = document.getElementById(`${sectionId}Products`);
-      container.innerHTML = '';
-      
-      products[sectionId].forEach(product => {
-        const productHTML = `
-          <div class="product" 
-               data-id="${product.id}" 
-               data-section="${sectionId}"
-               data-images='${JSON.stringify(product.images)}' 
-               data-desc="${product.description.replace(/"/g, '&quot;')}"
-               data-sizes="${product.sizes}">
-            <input type="checkbox" class="product-checkbox" data-id="${product.id}" 
-                   onclick="event.stopPropagation()">
-                   <div class="product-id">${product.id}</div>
-              <img src="${product.images[0]}" alt="${product.name}">
-              <div class="size-tooltip">المقاسات: ${product.sizes}</div>
-              <h3>${product.name}</h3>
-              <p class="price">السعر: ${product.price} جنيه</p>
-              <button onclick="addToCart(${product.id}, '${sectionId}')">🛒 أضف إلى السلة</button>
-            </div>
-          `;
-          container.innerHTML += productHTML;
-        });
-      }
+    
+    // تعديل دالة renderProducts لإضافة المربع
+    
+            
+    // تعديل دالة renderProducts
+  function renderProducts(sectionId) {
+    const container = document.getElementById(`${sectionId}Products`);
+    container.innerHTML = '';
+    
+    products[sectionId].forEach(product => {
+      const productHTML = `
+        <div class="product" 
+             data-id="${product.id}" 
+             data-section="${sectionId}"
+             data-images='${JSON.stringify(product.images)}' 
+             data-desc="${product.description.replace(/"/g, '&quot;')}"
+             data-sizes="${product.sizes}">
+          <input type="checkbox" class="product-checkbox" data-id="${product.id}" 
+                 onclick="event.stopPropagation()">
+                 <div class="product-id">${product.id}</div>
+            <img src="${product.images[0]}" alt="${product.name}">
+            <div class="size-tooltip">المقاسات: ${product.sizes}</div>
+            <h3>${product.name}</h3>
+            <p class="price">السعر: ${product.price} جنيه</p>
+            <button onclick="addToCart(${product.id}, '${sectionId}')">🛒 أضف إلى السلة</button>
+          </div>
+        `;
+        container.innerHTML += productHTML;
+      });
+    }
          
 
   // إضافة حدث منع الانتشار للنقر على المربع
@@ -1772,103 +1760,185 @@
     updateClock();
   
 
+
 async function loadProductsFromSheet() {
-  try {
-    const url = "https://opensheet.elk.sh/14PagQwAs6PDFYloRNQL6GBYcf7liw3QwWn7oc57PK1s/products";
-    const response = await fetch(url);
-    const data = await response.json();
+  const url = "https://opensheet.elk.sh/14PagQwAs6PDFYloRNQL6GBYcf7liw3QwWn7oc57PK1s/products";
+  const response = await fetch(url);
+  const data = await response.json();
 
-    if (!Array.isArray(data)) {
-      console.error("البيانات غير صالحة:", data);
-      return;
-    }
+  if (!Array.isArray(data)) {
+    console.error("البيانات غير صالحة:", data);
+    return;
+  }
 
-    // إعادة تهيئة المنتجات
-    products = { men: [], women: [], kids: [] };
+  products = { men: [], women: [], kids: [] };
 
-    // تعيين أكثر دقة للأقسام
+  data.forEach(item => {
+    const images = [item["main_image"], ...(item["images"] ? item["images"].split(',') : [])].map(img => {
+      if (img.includes("drive.google.com")) {
+        const match = img.match(/\/d\/([a-zA-Z0-9_-]+)/);
+        if (match) return `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1000`;
+      }
+      return img;
+    });
+
     const sectionMap = {
       "Electronics & Software": "men",
       "Tools & Spare Parts": "women",
-      "Financial, Security & Cleaning": "kids",
-      // أسماء بديلة قد تظهر في البيانات
-      "إلكترونيات وبرمجيات": "men",
-      "عدد وقطع غيار": "women",
-      "خدمات مصرفية وأمن ونظافة": "kids"
+      "Financial, Security &Cleaning": "kids"
     };
 
-    data.forEach(item => {
-      try {
-        // معالجة الصور
-        const images = [item["main_image"], ...(item["images"] ? item["images"].split(',') : [])]
-          .filter(img => img && img.trim())
-          .map(img => {
-            img = img.trim();
-            if (img.includes("drive.google.com")) {
-              const match = img.match(/\/d\/([a-zA-Z0-9_-]+)/) || 
-                           img.match(/id=([a-zA-Z0-9_-]+)/) ||
-                           img.match(/\/uc\?id=([a-zA-Z0-9_-]+)/);
-              if (match && match[1]) {
-                return `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1000`;
-              }
-            }
-            return img;
-          });
+    const sectionKey = sectionMap[item["section"]?.trim()] || "men";
 
-        // تحديد القسم
-        let sectionKey = "men"; // افتراضي
-        const itemSection = item["section"]?.trim();
-        
-        if (itemSection) {
-          // البحث عن أفضل تطابق
-          for (const [key, value] of Object.entries(sectionMap)) {
-            if (itemSection.replace(/\s+/g, '').toLowerCase() === key.replace(/\s+/g, '').toLowerCase()) {
-              sectionKey = value;
-              break;
-            }
-          }
-        }
+    const product = {
+      id: parseInt(item["id"]),
+      name: item["name"],
+      price: parseFloat(item["price"]),
+      description: item["description"],
+      images: images,
+      sizes: item["description"] || ""
+    };
 
-        // إنشاء المنتج
-        const product = {
-          id: parseInt(item["id"]) || ++lastProductId,
-          name: item["name"] || "منتج بدون اسم",
-          price: parseFloat(item["price"]) || 0,
-          description: item["description"] || "لا يوجد وصف",
-          images: images.length ? images : ["https://via.placeholder.com/300?text=No+Image"],
-          sizes: item["sizes"] || "غير محدد"
-        };
+    products[sectionKey].push(product);
+  });
 
-        // إضافة المنتج إلى القسم المناسب
-        if (products[sectionKey]) {
-          products[sectionKey].push(product);
-        } else {
-          console.warn(`قسم غير معروف: ${sectionKey}، تم إضافة المنتج إلى قسم الرجال كإفتراضي`);
-          products.men.push(product);
-        }
+  renderAllProducts();
+}
+document.addEventListener('DOMContentLoaded', loadProductsFromSheet);
 
-        // تحديث آخر معرف منتج
-        if (product.id > lastProductId) {
-          lastProductId = product.id;
-        }
-      } catch (error) {
-        console.error("خطأ في معالجة المنتج:", item, error);
+
+
+async function loadProductsFromSheet() {
+  const url = "https://opensheet.elk.sh/1njLom4hUbgpEgin1EJNf-fWcc_Wgj4-GE3RB6g00nGs/Sheet1";
+  const response = await fetch(url);
+  const data = await response.json();
+
+  if (!Array.isArray(data)) {
+    console.error("البيانات غير صالحة:", data);
+    return;
+  }
+
+  products = { men: [], women: [], kids: [] };
+
+  data.forEach(item => {
+    const images = [item["main_image"], ...(item["images"] ? item["images"].split(',') : [])].map(img => {
+      if (img.includes("drive.google.com")) {
+        const match = img.match(/\/d\/([a-zA-Z0-9_-]+)/);
+        if (match) return `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1000`;
       }
+      return img;
     });
 
-    renderAllProducts();
-    showAlert("تم تحميل المنتجات بنجاح", "success");
-  } catch (error) {
-    console.error("فشل في تحميل المنتجات:", error);
-    showAlert("فشل في تحميل المنتجات من جدول البيانات", "error");
-  }
+    const sectionMap = {
+      "Bulk Food": "men",
+      "Hotels & Restaurants": "women",
+      "Pharmacy & Medicine": "kids"
+    };
+
+    const sectionKey = sectionMap[item["section"]?.trim()] || "men";
+
+    const product = {
+      id: parseInt(item["id"]),
+      name: item["name"],
+      price: parseFloat(item["price"]),
+      description: item["description"],
+      images: images,
+      sizes: item["description"] || ""
+    };
+
+    products[sectionKey].push(product);
+  });
+
+  renderAllProducts();
+}
+document.addEventListener('DOMContentLoaded', loadProductsFromSheet);
+
+
+
+function sendInvoiceToSheet(method) {
+  const invoiceData = cart.map(item => {
+    return {
+      date: new Date().toISOString().split('T')[0],
+      invoice_id: `INV-${currentInvoiceNumber}`,
+      product_name: item.name,
+      quantity: item.quantity,
+      price: item.price,
+      total: item.quantity * item.price,
+      method: method
+    };
+  });
+
+  fetch("https://script.google.com/macros/s/AKfycbzSsIXhQo3xZpI0Kq3kMzVHg6sC3llNKXcB25b_x8iBjxUk7vbWt530vulOpV6Z5Ns0IQ/exec", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(invoiceData)
+  })
+  .then(res => console.log("تم إرسال الفاتورة إلى الشيت"))
+  .catch(err => console.error("خطأ في إرسال الفاتورة:", err));
+}
+
+// تحديث دوال الإرسال لإرسال الفاتورة أيضًا
+function sendEmail() {
+  sendInvoiceToSheet("Email");
+  const email = 'aaldkrwry08@gmail.com';
+  const subject = 'فاتورة شراء من متجر علي بابا أحمد الدكروري';
+  let body = 'تفاصيل الفاتورة:\n\n';
+  cart.forEach(item => {
+    body += `${item.name} - ${item.quantity} × ${item.price} = ${item.quantity * item.price}\n`;
+  });
+  body += `\nالمجموع الكلي: ${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)} جنيه`;
+  window.open(`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
+  showAlert("جارٍ فتح بريد الإرسال...", 'success');
+}
+
+function sendWhatsApp() {
+  sendInvoiceToSheet("WhatsApp");
+  const numbers = ['01221152075', '01500053127'];
+  let message = 'مرحباً، أريد شراء هذه المنتجات:\n\n';
+  cart.forEach(item => {
+    message += `${item.name} - الكمية: ${item.quantity}\n`;
+  });
+  message += `\nالمجموع الكلي: ${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)} جنيه`;
+  window.open(`https://wa.me/2${numbers[0]}?text=${encodeURIComponent(message)}`);
+  showAlert("جارٍ فتح واتساب...", 'success');
 }
 
 
-// تحميل المنتجات عند بدء الصفحة
-document.addEventListener('DOMContentLoaded', loadProductsFromSheet);
-  // معالجة نموذج الاتصال - مطابق للملف الأصلي
-  document.getElementById("contactForm").addEventListener("submit", function(e) {
+
+function sendTestInvoice() {
+  const invoiceData = [{
+    date: new Date().toISOString().split('T')[0],
+    invoice_id: `INV-TEST`,
+    product_name: "منتج تجريبي",
+    quantity: 1,
+    price: 123,
+    total: 123,
+    method: "TEST"
+  }];
+
+  fetch("https://script.google.com/macros/s/AKfycbzSsIXhQo3xZpI0Kq3kMzVHg6sC3llNKXcB25b_x8iBjxUk7vbWt530vulOpV6Z5Ns0IQ/exec", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(invoiceData)
+  })
+  .then(res => res.text())
+  .then(msg => alert("✅ تم إرسال فاتورة تجريبية: " + msg))
+  .catch(err => alert("❌ فشل الإرسال: " + err));
+}
+
+
+
+// ملاحظة مهمة: يجب تعديل كود Google Apps Script ليشمل هذا السطر داخل return:
+//
+// return ContentService.createTextOutput("تم تسجيل الفاتورة")
+//   .setMimeType(ContentService.MimeType.TEXT)
+//   .setHeader("Access-Control-Allow-Origin", "*");
+//
+// حتى يسمح للمتجر بإرسال البيانات من GitHub.
+ // معالجة نموذج الاتصال - مطابق للملف الأصلي
+ document.getElementById("contactForm").addEventListener("submit", function(e) {
             e.preventDefault();
 
             const form = e.target;
@@ -1889,5 +1959,7 @@ document.addEventListener('DOMContentLoaded', loadProductsFromSheet);
             });
         });
 </script>
+
+</div>
 </body>
 </html>
