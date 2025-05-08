@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html dir="rtl" lang="ar">
 <head>
 <meta charset="utf-8"/>
@@ -224,7 +223,6 @@
       padding: 20px;
       border-radius: 15px;
       box-shadow: var(--shadow);
-      display: ;
     }
     .controls input,
     .controls button,
@@ -602,6 +600,9 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
       padding: 10px;
       z-index: 95;
+      display: none;
+      flex-direction: column;
+      gap: 8px;
     }
     
     .action-menu button {
@@ -893,22 +894,6 @@
       font-size: 70px;
       border-radius: 250px;
       background-color: hwb(122 1% 76%);
-      
-    }
-    .product-checkbox {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      width: 20px;
-      height: 20px;
-      z-index: 10;
-      accent-color: var(--accent-color);
-      cursor: pointer;
-    }
-    
-    .delete-selected {
-      background: #d32f2f !important;
-      margin-right: 10px;
     }
     .product-checkbox {
       position: absolute;
@@ -934,93 +919,89 @@
     }
     /* نمط زر التواصل */
     .contact-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #4CAF50;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 60px;
-            font-size: 24px;
-            z-index: 100;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: all 0.3s;
-        }
-        
-        .contact-btn:hover {
-            transform: scale(1.1);
-            background-color: #45a049;
-        }
-        
-        /* نمط نموذج الاتصال المعدل حسب الملف الأصلي */
-        .contact-form {
-            background: #f00303e6;
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 500px;
-            margin: 0 auto;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            text-align: center;
-        }
-        
-        .contact-form h2 {
-            color: #333;
-            margin-bottom: 30px;
-            font-size: 16rem;
-        }
-        
-        .contact-form input,
-        .contact-form select,
-        .contact-form textarea {
-            width: 70%;
-            color: #e0e0e0;
-            padding: 12px 15px;
-            margin: 10px 0;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 20px;
-            color: #e0e0e0;
-            transition: all 0.3s;
-            background-color: hwb(272 0% 70% / 0.8);
-        }
-        
-        .contact-form input:focus,
-        .contact-form select:focus,
-        .contact-form textarea:focus {
-            border-color: hsl(0, 85%, 5%);
-            color: #e0e0e0;
-            outline: none;
-            box-shadow: 0 0 10px rgba(255,107,107,0.3);
-        }
-        h2{
-            text-align: center;
-            font-size: xx-large;
-        }
-        
-        .contact-form button {
-            background-color: #1f0202;
-            color: hsl(0, 17%, 94%);
-            border: none;
-            padding: 15px 30px;
-            font-size: 18px;
-            border-radius: 30px;
-            cursor: pointer;
-            margin-top: 20px;
-            font-weight: bold;
-            transition: all 0.3s;
-            width: auto;
-            display: inline-block;
-        }
-        
-        .contact-form button:hover {
-            background-color: #ff5252;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-  </style>
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #4CAF50;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 60px;
+      font-size: 24px;
+      z-index: 100;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.3s;
+    }
+    
+    .contact-btn:hover {
+      transform: scale(1.1);
+      background-color: #45a049;
+    }
+    
+    /* نمط نموذج الاتصال */
+    .contact-form {
+      background: #f00303e6;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    
+    .contact-form h2 {
+      color: #333;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+    
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 70%;
+      color: #e0e0e0;
+      padding: 12px 15px;
+      margin: 10px 0;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 20px;
+      color: #e0e0e0;
+      transition: all 0.3s;
+      background-color: hwb(272 0% 70% / 0.8);
+    }
+    
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+      border-color: hsl(0, 85%, 5%);
+      color: #e0e0e0;
+      outline: none;
+      box-shadow: 0 0 10px rgba(255,107,107,0.3);
+    }
+    
+    .contact-form button {
+      background-color: #1f0202;
+      color: hsl(0, 17%, 94%);
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-weight: bold;
+      transition: all 0.3s;
+      width: auto;
+      display: inline-block;
+    }
+    
+    .contact-form button:hover {
+      background-color: #ff5252;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+</style>
 </head>
 <body>
 <header>
@@ -1033,9 +1014,10 @@
 <a href="#women">قسم المطاعم والفنادق جملة</a>
 <a href="#kids">لوازم الصيدليات وتجارة الادوية</a>
 <a href="#clock">الساعة</a>
-<a href="#slide" >💾 تواصل معنا</a>
+<a href="#slide">💾 تواصل معنا</a>
 <a href="#" id="loadBtn">🔄 استرجاع البيانات</a>
 </nav>
+
 <!-- سلة التسوق المحسنة -->
 <div class="cart-icon" id="cartIcon">
     🛒
@@ -1055,18 +1037,21 @@
 </div>
 <button class="cart-btn" id="invoiceBtn">🧾 عرض الفاتورة</button>
 </div>
+
 <!-- قسم تجارة مواد غذائية جملة -->
 <section class="section" id="men">
 <h2>💾 قسم تجارة مواد غذائية جملة</h2>
 <div class="products" id="menProducts"></div>
 <!-- المنتجات ستضاف هنا تلقائيا -->
 </section>
+
 <!-- قسم المطاعم والفنادق جملة-->
 <section class="section" id="women">
 <h2>💾 قسم المطاعم والفنادق جملة</h2>
 <div class="products" id="womenProducts"></div>
 <!-- المنتجات ستضاف هنا تلقائيا -->
 </section>
+
 <!-- لوازم الصيدليات وتجارة الادوية-->
 <section class="section" id="kids">
 <h2>🧒 لوازم الصيدليات وتجارة الادوية</h2>
@@ -1074,11 +1059,13 @@
 <!-- المنتجات ستضاف هنا تلقائيا -->
 </div>
 </section>
+
 <!-- قسم الساعة -->
 <section class="section" id="clock">
 <h2>🕰️ الساعة ومواقيت الصلاة</h2>
 <div id="time">جارٍ تحميل الساعة...</div>
 </section>
+
 <!-- معرض الصور -->
 <div class="gallery-modal" id="galleryModal">
 <span class="gallery-close">×</span>
@@ -1092,6 +1079,7 @@
 <button class="gallery-btn" id="nextBtn">❯</button>
 </div>
 </div>
+
 <!-- نموذج الفاتورة -->
 <div class="invoice-modal" id="invoiceModal">
 <div class="invoice-content">
@@ -1121,9 +1109,10 @@
 </div>
 <button class="print-invoice" onclick="printInvoice()">
 <span>🖨️</span> طباعة الفاتورة
-      </button>
+</button>
 </div>
 </div>
+
 <!-- أزرار الفاتورة المحسنة -->
 <div class="action-buttons">
 <button class="action-button main" id="mainActionButton">
@@ -1132,17 +1121,19 @@
 <div class="action-menu">
 <button class="action-button pdf" id="pdfBtn">
 <span>📄</span> PDF
-      </button>
+</button>
 <button class="action-button email" id="emailBtn">
 <span>✉️</span> إيميل
-      </button>
+</button>
 <button class="action-button whatsapp" id="whatsappBtn">
 <span>💬</span> واتساب
-      </button>
+</button>
 </div>
 </div>
+
 <!-- تنبيه -->
 <div class="alert" id="alert"></div>
+
 <div class="footer">
     جميع الحقوق محفوظة © متجر علي بابا أحمد الدكروري 2025
     <br/>
@@ -1164,13 +1155,7 @@
                     
                     <div class="form-group">
                         <label for="subject">الموضوع</label>
-                        <select id="subject" name="subject" required>
-                            <option value="">اختر موضوع الرسالة</option>
-                            <option value="استفسار">استفسار</option>
-                            <option value="طلب عرض">طلب عرض</option>
-                            <option value="شكوى">شكوى</option>
-                            <option value="اقتراح">اقتراح</option>
-                        </select>
+<textarea id="subject" name="subject" placeholder="اكتب موضوع رسالتك هنا (حتى 100 كلمة)" maxlength="700" rows="4" required></textarea>
                     </div> 
                     <button type="submit" class="submit-btn">إرسال الرسالة <i class="fas fa-paper-plane"></i></button>
                 </form>
@@ -1180,6 +1165,7 @@
   </div>
   </section>
 </div>
+
 <script>
     // متغيرات التطبيق
     let products = {
@@ -1249,45 +1235,31 @@
     }
 
     // دالة لعرض المنتجات في قسم معين
-    
-    // تعديل دالة renderProducts لإضافة المربع
-    
-            
-    // تعديل دالة renderProducts
-  function renderProducts(sectionId) {
-    const container = document.getElementById(`${sectionId}Products`);
-    container.innerHTML = '';
-    
-    products[sectionId].forEach(product => {
-      const productHTML = `
-        <div class="product" 
-             data-id="${product.id}" 
-             data-section="${sectionId}"
-             data-images='${JSON.stringify(product.images)}' 
-             data-desc="${product.description.replace(/"/g, '&quot;')}"
-             data-sizes="${product.sizes}">
-          <input type="checkbox" class="product-checkbox" data-id="${product.id}" 
-                 onclick="event.stopPropagation()">
-                 <div class="product-id">${product.id}</div>
-            <img src="${product.images[0]}" alt="${product.name}">
-            <div class="size-tooltip">المقاسات: ${product.sizes}</div>
-            <h3>${product.name}</h3>
-            <p class="price">السعر: ${product.price} جنيه</p>
-            <button onclick="addToCart(${product.id}, '${sectionId}')">🛒 أضف إلى السلة</button>
-          </div>
-        `;
-        container.innerHTML += productHTML;
-      });
-    }
-         
-
-  // إضافة حدث منع الانتشار للنقر على المربع
-  document.addEventListener('click', function(e) {
-    if (e.target.classList.contains('product-checkbox')) {
-      e.stopPropagation();
-    }
-  });
-
+    function renderProducts(sectionId) {
+      const container = document.getElementById(`${sectionId}Products`);
+      container.innerHTML = '';
+      
+      products[sectionId].forEach(product => {
+        const productHTML = `
+          <div class="product" 
+               data-id="${product.id}" 
+               data-section="${sectionId}"
+               data-images='${JSON.stringify(product.images)}' 
+               data-desc="${product.description.replace(/"/g, '&quot;')}"
+               data-sizes="${product.sizes}">
+            <input type="checkbox" class="product-checkbox" data-id="${product.id}" 
+                   onclick="event.stopPropagation()">
+                   <div class="product-id">${product.id}</div>
+              <img src="${product.images[0]}" alt="${product.name}">
+              <div class="size-tooltip">المقاسات: ${product.sizes}</div>
+              <h3>${product.name}</h3>
+              <p class="price">السعر: ${product.price} جنيه</p>
+              <button onclick="addToCart(${product.id}, '${sectionId}')">🛒 أضف إلى السلة</button>
+            </div>
+          `;
+          container.innerHTML += productHTML;
+        });
+      }
 
     // دالة لإضافة منتج جديد
     function addProduct(sectionId) {
@@ -1424,10 +1396,8 @@
       searchIdInput.value = '';
     }
 
-    // دالة لحذف جميع المنتجات
-    
-     // دالة حذف المحدد
-     function clearProducts(sectionId) {
+    // دالة لحذف المنتجات المحددة
+    function clearProducts(sectionId) {
       const checkboxes = document.querySelectorAll(`#${sectionId}Products .product-checkbox:checked`);
       if (checkboxes.length === 0) {
         showAlert("الرجاء تحديد منتجات للحذف", 'error');
@@ -1440,9 +1410,6 @@
       renderProducts(sectionId);
       showAlert(`تم حذف ${selectedIds.length} منتج(ات)`, 'success');
     }
-
-    // دالة حذف الكل (كما كانت)
-   
 
     // دالة لإضافة منتج إلى السلة
     function addToCart(productId, sectionId) {
@@ -1584,6 +1551,7 @@
 
     // دالة لإرسال الفاتورة بالبريد
     function sendEmail() {
+      sendInvoiceToSheet("Email");
       const email = 'aaldkrwry08@gmail.com';
       const subject = 'فاتورة شراء من متجر علي بابا أحمد الدكروري';
       let body = 'تفاصيل الفاتورة:\n\n';
@@ -1600,6 +1568,7 @@
 
     // دالة لإرسال الفاتورة عبر واتساب
     function sendWhatsApp() {
+      sendInvoiceToSheet("WhatsApp");
       const numbers = ['01221152075', '01500053127'];
       let message = 'مرحباً، أريد شراء هذه المنتجات:\n\n';
       
@@ -1677,6 +1646,84 @@
       updateGallery();
     }
 
+    // دالة لتحميل المنتجات من جدول بيانات Google
+    async function loadProductsFromSheet() {
+      const url = "https://opensheet.elk.sh/1njLom4hUbgpEgin1EJNf-fWcc_Wgj4-GE3RB6g00nGs/Sheet1";
+      
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (!Array.isArray(data)) {
+          console.error("البيانات غير صالحة:", data);
+          showAlert("حدث خطأ في تحميل المنتجات", 'error');
+          return;
+        }
+
+        products = { men: [], women: [], kids: [] };
+
+        data.forEach(item => {
+          const images = [item["main_image"], ...(item["images"] ? item["images"].split(',') : [])].map(img => {
+            if (img.includes("drive.google.com")) {
+              const match = img.match(/\/d\/([a-zA-Z0-9_-]+)/);
+              if (match) return `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1000`;
+            }
+            return img;
+          });
+
+          const sectionMap = {
+            "Bulk Food": "men",
+            "Hotels & Restaurants": "women",
+            "Pharmacy & Medicine": "kids"
+          };
+
+          const sectionKey = sectionMap[item["section"]?.trim()] || "men";
+
+          const product = {
+            id: parseInt(item["id"]),
+            name: item["name"],
+            price: parseFloat(item["price"]),
+            description: item["description"] || "لا يوجد وصف",
+            images: images.filter(img => img),
+            sizes: item["sizes"] || "لا يوجد مقاسات محددة"
+          };
+
+          products[sectionKey].push(product);
+        });
+
+        renderAllProducts();
+        showAlert("تم تحميل المنتجات بنجاح", 'success');
+      } catch (error) {
+        console.error("حدث خطأ في جلب البيانات:", error);
+        showAlert("حدث خطأ في تحميل المنتجات", 'error');
+      }
+    }
+
+    // دالة لإرسال الفاتورة إلى جدول بيانات Google
+    function sendInvoiceToSheet(method) {
+      const invoiceData = cart.map(item => {
+        return {
+          date: new Date().toISOString().split('T')[0],
+          invoice_id: `INV-${currentInvoiceNumber}`,
+          product_name: item.name,
+          quantity: item.quantity,
+          price: item.price,
+          total: item.quantity * item.price,
+          method: method
+        };
+      });
+
+      fetch("https://script.google.com/macros/s/AKfycbzSsIXhQo3xZpI0Kq3kMzVHg6sC3llNKXcB25b_x8iBjxUk7vbWt530vulOpV6Z5Ns0IQ/exec", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(invoiceData)
+      })
+      .then(res => console.log("تم إرسال الفاتورة إلى الشيت"))
+      .catch(err => console.error("خطأ في إرسال الفاتورة:", err));
+    }
+
     // تهيئة التطبيق
     document.addEventListener('DOMContentLoaded', function() {
       // أحداث معرض الصور
@@ -1690,7 +1737,6 @@
       document.querySelector('.close-invoice').addEventListener('click', closeInvoice);
 
       // أحداث الحفظ والتحميل
-      document.getElementById('saveBtn').addEventListener('click', saveData);
       document.getElementById('loadBtn').addEventListener('click', loadData);
 
       // أحداث أزرار الفاتورة
@@ -1751,215 +1797,35 @@
         }
       });
 
-      // تحميل أي بيانات محفوظة عند البدء
-      loadData();
+      // معالجة نموذج الاتصال
+      document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const form = e.target;
+        const data = new FormData(form);
+
+        fetch("https://script.google.com/macros/s/AKfycbxBbWZmKgRfp_ajFc0znyKeINqHOfN5iXrHKUat_2UtAIlE4fvxOH-Dxs8X7wd7iF90/exec", {
+            method: "POST",
+            body: data
+        })
+        .then(response => response.text())
+        .then(result => {
+            alert("✅ تم إرسال رسالتك بنجاح!");
+            form.reset();
+        })
+        .catch(error => {
+            alert("❌ حدث خطأ أثناء الإرسال، حاول لاحقًا.");
+            console.error(error);
+        });
+      });
+
+      // تحميل المنتجات عند البدء
+      loadProductsFromSheet();
     });
 
     // تحديث الساعة كل ثانية
     setInterval(updateClock, 1000);
     updateClock();
-  
-
-
-async function loadProductsFromSheet() {
-  const url = "https://opensheet.elk.sh/14PagQwAs6PDFYloRNQL6GBYcf7liw3QwWn7oc57PK1s/products";
-  const response = await fetch(url);
-  const data = await response.json();
-
-  if (!Array.isArray(data)) {
-    console.error("البيانات غير صالحة:", data);
-    return;
-  }
-
-  products = { men: [], women: [], kids: [] };
-
-  data.forEach(item => {
-    const images = [item["main_image"], ...(item["images"] ? item["images"].split(',') : [])].map(img => {
-      if (img.includes("drive.google.com")) {
-        const match = img.match(/\/d\/([a-zA-Z0-9_-]+)/);
-        if (match) return `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1000`;
-      }
-      return img;
-    });
-
-    const sectionMap = {
-      "Electronics & Software": "men",
-      "Tools & Spare Parts": "women",
-      "Financial, Security &Cleaning": "kids"
-    };
-
-    const sectionKey = sectionMap[item["section"]?.trim()] || "men";
-
-    const product = {
-      id: parseInt(item["id"]),
-      name: item["name"],
-      price: parseFloat(item["price"]),
-      description: item["description"],
-      images: images,
-      sizes: item["description"] || ""
-    };
-
-    products[sectionKey].push(product);
-  });
-
-  renderAllProducts();
-}
-document.addEventListener('DOMContentLoaded', loadProductsFromSheet);
-
-
-
-async function loadProductsFromSheet() {
-  const url = "https://opensheet.elk.sh/1njLom4hUbgpEgin1EJNf-fWcc_Wgj4-GE3RB6g00nGs/Sheet1";
-  const response = await fetch(url);
-  const data = await response.json();
-
-  if (!Array.isArray(data)) {
-    console.error("البيانات غير صالحة:", data);
-    return;
-  }
-
-  products = { men: [], women: [], kids: [] };
-
-  data.forEach(item => {
-    const images = [item["main_image"], ...(item["images"] ? item["images"].split(',') : [])].map(img => {
-      if (img.includes("drive.google.com")) {
-        const match = img.match(/\/d\/([a-zA-Z0-9_-]+)/);
-        if (match) return `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1000`;
-      }
-      return img;
-    });
-
-    const sectionMap = {
-      "Bulk Food": "men",
-      "Hotels & Restaurants": "women",
-      "Pharmacy & Medicine": "kids"
-    };
-
-    const sectionKey = sectionMap[item["section"]?.trim()] || "men";
-
-    const product = {
-      id: parseInt(item["id"]),
-      name: item["name"],
-      price: parseFloat(item["price"]),
-      description: item["description"],
-      images: images,
-      sizes: item["description"] || ""
-    };
-
-    products[sectionKey].push(product);
-  });
-
-  renderAllProducts();
-}
-document.addEventListener('DOMContentLoaded', loadProductsFromSheet);
-
-
-
-function sendInvoiceToSheet(method) {
-  const invoiceData = cart.map(item => {
-    return {
-      date: new Date().toISOString().split('T')[0],
-      invoice_id: `INV-${currentInvoiceNumber}`,
-      product_name: item.name,
-      quantity: item.quantity,
-      price: item.price,
-      total: item.quantity * item.price,
-      method: method
-    };
-  });
-
-  fetch("https://script.google.com/macros/s/AKfycbzSsIXhQo3xZpI0Kq3kMzVHg6sC3llNKXcB25b_x8iBjxUk7vbWt530vulOpV6Z5Ns0IQ/exec", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(invoiceData)
-  })
-  .then(res => console.log("تم إرسال الفاتورة إلى الشيت"))
-  .catch(err => console.error("خطأ في إرسال الفاتورة:", err));
-}
-
-// تحديث دوال الإرسال لإرسال الفاتورة أيضًا
-function sendEmail() {
-  sendInvoiceToSheet("Email");
-  const email = 'aaldkrwry08@gmail.com';
-  const subject = 'فاتورة شراء من متجر علي بابا أحمد الدكروري';
-  let body = 'تفاصيل الفاتورة:\n\n';
-  cart.forEach(item => {
-    body += `${item.name} - ${item.quantity} × ${item.price} = ${item.quantity * item.price}\n`;
-  });
-  body += `\nالمجموع الكلي: ${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)} جنيه`;
-  window.open(`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
-  showAlert("جارٍ فتح بريد الإرسال...", 'success');
-}
-
-function sendWhatsApp() {
-  sendInvoiceToSheet("WhatsApp");
-  const numbers = ['01221152075', '01500053127'];
-  let message = 'مرحباً، أريد شراء هذه المنتجات:\n\n';
-  cart.forEach(item => {
-    message += `${item.name} - الكمية: ${item.quantity}\n`;
-  });
-  message += `\nالمجموع الكلي: ${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)} جنيه`;
-  window.open(`https://wa.me/2${numbers[0]}?text=${encodeURIComponent(message)}`);
-  showAlert("جارٍ فتح واتساب...", 'success');
-}
-
-
-
-function sendTestInvoice() {
-  const invoiceData = [{
-    date: new Date().toISOString().split('T')[0],
-    invoice_id: `INV-TEST`,
-    product_name: "منتج تجريبي",
-    quantity: 1,
-    price: 123,
-    total: 123,
-    method: "TEST"
-  }];
-
-  fetch("https://script.google.com/macros/s/AKfycbzSsIXhQo3xZpI0Kq3kMzVHg6sC3llNKXcB25b_x8iBjxUk7vbWt530vulOpV6Z5Ns0IQ/exec", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(invoiceData)
-  })
-  .then(res => res.text())
-  .then(msg => alert("✅ تم إرسال فاتورة تجريبية: " + msg))
-  .catch(err => alert("❌ فشل الإرسال: " + err));
-}
-
-
-
-// ملاحظة مهمة: يجب تعديل كود Google Apps Script ليشمل هذا السطر داخل return:
-//
-// return ContentService.createTextOutput("تم تسجيل الفاتورة")
-//   .setMimeType(ContentService.MimeType.TEXT)
-//   .setHeader("Access-Control-Allow-Origin", "*");
-//
-// حتى يسمح للمتجر بإرسال البيانات من GitHub.
- // معالجة نموذج الاتصال - مطابق للملف الأصلي
- document.getElementById("contactForm").addEventListener("submit", function(e) {
-            e.preventDefault();
-
-            const form = e.target;
-            const data = new FormData(form);
-
-            fetch("https://script.google.com/macros/s/AKfycbxBbWZmKgRfp_ajFc0znyKeINqHOfN5iXrHKUat_2UtAIlE4fvxOH-Dxs8X7wd7iF90/exec", {
-                method: "POST",
-                body: data
-            })
-            .then(response => response.text())
-            .then(result => {
-                alert("✅ تم إرسال رسالتك بنجاح!");
-                form.reset();
-            })
-            .catch(error => {
-                alert("❌ حدث خطأ أثناء الإرسال، حاول لاحقًا.");
-                console.error(error);
-            });
-        });
 </script>
-
-</div>
 </body>
 </html>
